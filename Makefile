@@ -15,4 +15,4 @@ lib: $(OBJECTS)
 	$(CC) -shared -fPIC -o sht.so $(OBJECTS)
  
 clean:
-	rm *.o *.so
+	rm *.o *.so main

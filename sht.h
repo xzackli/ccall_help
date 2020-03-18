@@ -1,5 +1,4 @@
 #include <complex.h>
-
 typedef double complex dcmplx;  // complex double type
 
 int sht(double** origin, dcmplx** target, 

@@ -1,13 +1,11 @@
 #  set up 
-origin = collect(1.0:3.0)
+origin = [Cdouble(i) for i in 1:3]
 target = zeros(ComplexF64, 3)
 
 pointer_origin = pointer([origin],1)
 pointer_target = pointer([target],1)
 
 # perform the call
-println(target)
-
 ccall(
     (:sht, "./sht.so"),
     Cint,

@@ -1,9 +1,9 @@
 #  set up 
-origin = [Cdouble(i) for i in 1:3]
-target = zeros(ComplexF64, 3)
+origin = [[Cdouble(i) for i in 1:3]]
+target = [zeros(ComplexF64, 3)]
 
-pointer_origin = pointer([origin],1)
-pointer_target = pointer([target],1)
+pointer_origin = pointer(origin,1)
+pointer_target = pointer(target,1)
 
 # perform the call
 ccall(

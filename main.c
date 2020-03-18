@@ -12,9 +12,9 @@ int main()
     origin = (double **) malloc(ncomp * sizeof(double *));
     origin[0] = (double *) malloc(ncomp * array_size * sizeof(double));
 
-    double **target;
-    target = (double **) malloc(ncomp * sizeof(double *));
-    target[0] = (double *) malloc(ncomp * array_size * sizeof(double));
+    dcmplx **target;
+    target = (dcmplx **) malloc(ncomp * sizeof(dcmplx *));
+    target[0] = (dcmplx *) malloc(ncomp * array_size * sizeof(dcmplx));
     
     // set some numbers in the origin array
     for (int i=0; i<array_size; ++i)
@@ -25,7 +25,7 @@ int main()
 
     // print target array
     for (int i=0; i<array_size; ++i)
-        printf("%f ", (target[0])[i]);
+        printf("%e + i%e\n", creal(target[0][i]), cimag(target[0][i]));
     printf("\n");
     return 0;
 }
